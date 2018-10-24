@@ -12,6 +12,25 @@ header {
     background-size: cover;
 }
 
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+.logo:hover,
+.logo:focus,
+.logo:active {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
 .content {
     width: 100%;
     text-align: center;
@@ -194,6 +213,7 @@ header {
     line-height: 3px;
     margin-top: 10px;
     padding: 0px;
+    padding-left: 20px;
 }
 
 .project {
@@ -258,6 +278,10 @@ header {
     height: 250px;
     background-color: #d9d9d9;
     margin: 20px auto;
+}
+
+.b2 h1 {
+    font-family: 'Playfair Display', serif;
 }
 
 .c1 {
@@ -334,7 +358,7 @@ header {
     border-radius: 50%;
 }
 
-.testmonial .container {
+.testmonial .container-fluid {
     text-align: center;
     height: 400px;
     padding-top: 200px;
@@ -343,7 +367,7 @@ header {
     width: 100%;
 }
 
-.testmonial .container h1 {
+.testmonial .container-fluid h1 {
     font-size: 30px;
     font-family: "PlayfairDisplay-Italic";
 }
@@ -388,7 +412,6 @@ header {
     opacity: 0;
     background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
     background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
-    /* W3C */
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
     -webkit-transition-property: transform, opacity;
@@ -542,6 +565,7 @@ header {
 
 .regist {
     height: 450px;
+    padding-top: 50px;
 }
 
 .info {
@@ -598,7 +622,6 @@ header {
     padding: 20px;
     text-align: left;
     font-size: 15px;
-    background-color: #0c0c0c;
     color: white;
 }
 
@@ -666,15 +689,14 @@ header {
     height: 100%;
 }
 
-footer {
+.creator {
     width: 100%;
     height: 70px;
-    background-color: #0c0c0c;
     text-align: center;
     padding-top: 25px;
 }
 
-footer p {
+.creator p {
     color: rgba(233, 233, 233, 255);
     margin: auto;
     font-size: 14px;
@@ -714,6 +736,7 @@ footer p {
         line-height: 2px;
         margin: 20px auto;
         font-size: 12px;
+        padding-left: 0;
     }
 }
 
@@ -794,14 +817,14 @@ footer p {
         background-color: #d9d9d9;
         margin: 20px auto;
     }
-    .testmonial .container h1 {
+    .testmonial .container-fluid h1 {
         font-size: 20px;
     }
     .testmonial {
         height: 400px;
         padding: 80px;
     }
-    .testmonial .container {
+    .testmonial .container-fluid {
         padding-top: 50px;
     }
     .carousel-indicators {
@@ -834,13 +857,19 @@ footer p {
 
 @media(max-width: 614px) {
     .regist {
-        height: 450px;
+        height: 480px;
     }
     .info {
         margin-top: 60px;
     }
     .formid {
         margin-top: 60px;
+    }
+    .endpage {
+        height: 1100px;
+    }
+    .reg {
+        height: 920px;
     }
 }
 
@@ -851,14 +880,14 @@ footer p {
 }
 
 @media(max-width: 414px) {
-    .testmonial .container h1 {
+    .testmonial .container-fluid h1 {
         font-size: 20px;
     }
     .testmonial {
         height: 400px;
         padding: 40px;
     }
-    .testmonial .container {
+    .testmonial .container-fluid {
         padding-top: 50px;
     }
     .carousel-indicators {
@@ -869,13 +898,19 @@ footer p {
         height: 750px;
     }
     .reg {
-        height: 920px;
+        height: 980px;
     }
 }
 
 @media(max-width: 375px) {
+    .content {
+        margin-top: 100px;
+    }
+    .down-vector {
+        margin-top: 100px;
+    }
     .reg {
-        height: 920px;
+        height: 980px;
     }
     .project {
         height: 3050px;
@@ -908,20 +943,29 @@ footer p {
         margin: 10px auto;
         font-size: 10px;
     }
-    .testmonial .container h1 {
+    .testmonial .container-fluid h1 {
         font-size: 12px;
     }
     .testmonial {
         height: 200px;
         padding: 0;
     }
-    .testmonial .container {
+    .testmonial .container-fluid {
         padding-top: 50px;
     }
     .carousel-indicators {
         margin: 0;
         position: absolute;
         bottom: -20px;
+    }
+    .post-slide2 .read-more {
+        top: 40%;
+    }
+}
+
+@media(max-width: 320px) {
+    .post-slide2 .read-more {
+        top: 30%;
     }
 }
 
@@ -959,4 +1003,5 @@ hr {
 .hr1 {
     width: 100%;
     border-bottom: 0.1px solid white;
+    height: 1px;
 }
